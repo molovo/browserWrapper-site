@@ -1,0 +1,218 @@
+/* ---------------------------------------
+	Melody - Yet another CSS framework
+--------------------------------------- */
+
+
+
+/* First, reset some default styles.
+================================================== */
+  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-weight: inherit;
+    vertical-align: baseline;
+    letter-spacing: 0; }
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block; }
+  body {
+    line-height: 1; }
+  ol, ul {
+    list-style: none; }
+  blockquote, q {
+    quotes: none; }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none; }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+
+
+/* Add some basic typography.
+======================================= */
+
+  body { font: 400 20px/24px Helvetica, Arial, sans-serif; }
+
+    h1 { font-size: 54px; line-height: 60px; margin-bottom: 12px; }
+    h2 { font-size: 46px; line-height: 50px; margin-bottom: 10px; }
+    h3 { font-size: 40px; line-height: 44px; margin-bottom: 8px; }
+    h4 { font-size: 34px; line-height: 38px; margin-bottom: 4px; }
+    h5 { font-size: 26px; line-height: 30px; }
+    h6 { font-size: 22px; line-height: 26px; }
+    p, ul, ol, dl, blockquote {
+        margin-bottom: 12px;
+    }
+
+    em { font-style: italic; }
+    strong { font-weight: 600; }
+
+    .center { text-align: center; }
+    .lalign { text-align: left; }
+    .ralign { text-align: right; }
+
+
+
+/* Build our container.
+======================================= */
+
+  .container {
+    width: auto;
+    max-width: 960px;
+    margin: 0 auto;
+    letter-spacing: -.25em;
+  }
+
+
+  /* Reset letter spacing for elements not in grid */
+
+  .container > * {
+    letter-spacing: 0px;
+  }
+
+
+
+/* Base styles for all grid components.
+======================================= */
+
+  .container .grid {
+    display: inline-block;
+    padding: 30px 15px;
+    margin: 0;
+    vertical-align: top;
+    position: relative;
+    letter-spacing: 0px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .container .grid.remove-padding {
+    padding: 0;
+  }
+
+
+
+/* Set sizes for each component of grid.
+
+  (first character numerals are escaped as follows:
+  '\31 ' = '1' )
+
+  .grid defaults to equal .1of12
+======================================= */
+
+  .grid, .grid.\31 of12 {
+    width: 8.3333%;
+  }
+  .grid.\32 of12, .grid.\31 of6 {
+    width: 16.6666%;
+  }
+  .grid.\33 of12, .grid.\31 of4 {
+    width: 25%;
+  }
+  .grid.\34 of12, .grid.\32 of6, .grid.\31 of3 {
+    width: 33.3333%;
+  }
+  .grid.\35 of12 {
+    width: 41.6666%;
+  }
+  .grid.\36 of12, .grid.\33 of6, .grid.\32 of4, .grid.\31 of2 {
+    width: 50%;
+  }
+  .grid.\37 of12 {
+    width: 58.3333%;
+  }
+  .grid.\38 of12, .grid.\34 of6, .grid.\32 of3 {
+    width: 66.6666%;
+  }
+  .grid.\39 of12, .grid.\33 of4 {
+    width: 75%;
+  }
+  .grid.\31 0of12, .grid.\35 of-six {
+    width: 83.3333%;
+  }
+  .grid.\31 1of12 {
+    width: 96.6666%;
+  }
+  .grid.\31 2of12, .grid.\36 of6, .grid.\34 of4, .grid.\33 of3, .grid.\32 of2, .grid.\31 of1 {
+    width: 100%;
+  }
+
+
+
+/* Collapse grid for mobile.
+======================================= */
+
+  @media screen and (max-width: 700px) {
+
+    /* Collapse grid to 100% width for
+       smaller screen sizes.
+
+       Use class .stick-to-grid to stop grid cells
+       from collapsing. */
+
+    .container .grid:not(.stick-to-grid) {
+      width: 100%;
+    }
+  }
+
+
+
+/* Widen grid to 1280px for large screens.
+======================================= */
+
+  @media screen and (min-width: 1300px) {
+ 
+    /* Widen container */
+
+  	.container {
+  		max-width: 1280px;
+  	}
+
+
+
+    /* Add additional padding to .keep-shape elements
+       to keep to same size as 960 grid version */
+
+    .grid.keep-shape, .grid.\31 of12.keep-shape {
+      padding: 30px 28.3333px; 
+    }
+    .grid.\32 of12.keep-shape, .grid.\31 of6.keep-shape {
+      padding: 30px 41.6667px;
+    }
+    .grid.\33 of12.keep-shape, .grid.\31 of4.keep-shape {
+      padding: 30px 55px;
+    }
+    .grid.\34 of12.keep-shape, .grid.\32 of6.keep-shape, .grid.\31 of3.keep-shape {
+      padding: 30px 68.3333px;
+    }
+    .grid.\35 of12.keep-shape {
+      padding: 30px 81.6667px;
+    }
+    .grid.\36 of12.keep-shape, .grid.\33 of6.keep-shape, .grid.\32 of4.keep-shape, .grid.\31 of2.keep-shape {
+      padding: 30px 95px;
+    }
+    .grid.\37 of12.keep-shape {
+      padding: 30px 108.3333px;
+    }
+    .grid.\38 of12.keep-shape, .grid.\34 of6, .grid.\32 of3.keep-shape {
+      padding: 30px 121.6667px;
+    }
+    .grid.\39 of12.keep-shape, .grid.\33 of4.keep-shape {
+      padding: 30px 135px;
+    }
+    .grid.\31 0of12.keep-shape, .grid.\35 of-six.keep-shape {
+      padding: 30px 148.3333px;
+    }
+    .grid.\31 1of12.keep-shape {
+      padding: 30px 161.6667px;
+    }
+    .grid.\31 2of12.keep-shape, .grid.\36 of6.keep-shape, .grid.\34 of4.keep-shape, .grid.\33 of3.keep-shape, .grid.\32 of2.keep-shape, .grid.\31 of1.keep-shape {
+      padding: 30px 175px;
+    }
+  }
