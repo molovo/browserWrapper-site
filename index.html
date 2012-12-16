@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Melody - by molovo</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="css/melody.css">
+
+	<!-- Favicons
+  ================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	<script type="text/javascript" src="//use.typekit.net/daj1asl.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+	<style>
+		body {
+			font-family: "freight-sans-pro";
+			font-weight: 400;
+			color: rgb(51,61,71);
+		}
+
+		h1 { 
+			font-family: "skolar";
+			color: rgb(225,120,98);
+		}
+
+		h2 {
+			font-family: "skolar";
+			color: rgb(131,141,151);
+		}
+
+		strong { color: rgb(225,120,98); }
+
+		.grid span {
+			background: rgb(225,120,98);
+			text-align: center;
+			color: white;
+			width: 100%;
+			display: inline-block;
+			padding: 15px 0;
+			font-weight: 500;
+			border-radius: 2px;
+			font-family: monospace;
+			font-size: 14px;
+		}
+
+		.grid span.gray{
+			background: rgb(131,141,151);
+		}
+
+		a.grid span { font-family: "freight-sans-pro"; font-size: 100%; }
+		a.grid:hover span {
+			background: rgb(98,225,177);
+			color: rgb(51,61,71);
+		}
+
+		code {
+			font-family: monospace;
+			font-size: 16px;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container">
+
+		<div class="grid 1of1">
+			<h1 class="red">Melody</h1>
+			<h3 class="dark"><em>Yet another</em> responsive OOCSS grid framework.</h3>
+		</div>
+
+		
+		<h5 class="grid 1of1 center keep-shape">Welcome to Melody, an extremely lightweight CSS grid framework. I've adapted and borrowed elements from a number of other frameworks to evolve this into something that meets my needs, and done things a little differently to make it more flexible.</h5>
+
+		<h2 class="grid 1of1 center">Features</h2>
+
+			<p class="grid 1of2 center keep-shape">
+				Just one <strong>tiny</strong> .css file, with as little default styling as possible, and a strong emphasis on <strong>white space</strong> to give the layout breathing room.
+			</p>
+
+			<p class="grid 1of2 center keep-shape">
+				<strong>No floats</strong> means no dodgy IE hacks to try and clear them. Just the nice and clean, <strong>display: inline-block;</strong>
+			</p>
+
+			<p class="grid 1of2 center keep-shape">
+				Uses <strong>padding</strong> and <strong>box-sizing: border-box;</strong> instead of margin for spacing, which makes it much easier to create a grid-within-a-grid or <strong>marginless layouts</strong>. If you need spacing, then style the content; If you need a grid <b>without spacing</b>, then style the grid itself, or use the class <strong>.remove-padding</strong>. 
+			</p>
+
+			<p class="grid 1of2 center keep-shape">
+				Uses the class <strong>.stick-to-grid</strong> to preserve the width and offset of grid elements at mobile screen sizes.
+			</p>
+
+			<p class="grid 1of2 center keep-shape">
+				Uses the class <strong>.keep-shape</strong> to add additional padding to grid elements to keep them at 960-grid size when the grid expands to 1280 wide on large screens.
+			</p>
+
+			<p class="grid 1of2 center keep-shape">
+				Uses the class <strong>.offset-<em>n</em></strong> to add left-margin to an element to create an offset. The value of <em>n</em> is the number of columns (1-12) for the offset. 
+			</p>
+
+		<h2 class="grid 1of1 center">Example</h2>
+
+			<p class="grid 1of1 center keep-shape">
+				Basic grid shown in <strong>red</strong>. Elements with additional classes shown in <strong style="color:rgb(131,141,151);">gray</strong>.
+			</p>
+
+			<div class="grid 1of1"><span>.grid.1of1</span></div>
+			
+			<div class="grid 1of2 keep-shape stick-to-grid" title=".grid.1of2.keep-shape.stick-to-grid"><span class="gray">.grid.1of2.keep-shape.stick-to-grid</span></div>
+			<div class="grid 1of2 stick-to-grid"><span class="gray">.grid.1of2.stick-to-grid</span></div>
+
+			<div class="grid 2of2"><span>.grid.2of2</span></div>
+			
+			<div class="grid 1of3 stick-to-grid"><span class="gray">.grid.1of3.stick-to-grid</span></div>
+			<div class="grid 1of3 stick-to-grid"><span class="gray">.grid.1of3.stick-to-grid</span></div>
+			<div class="grid 1of3 stick-to-grid"><span class="gray">.grid.1of3.stick-to-grid</span></div>
+				
+			<div class="grid 2of3 offset-4 stick-to-grid"><span class="gray">.grid.2of3.offset-4.stick-to-grid</span></div>	
+			<div class="grid 1of3"><span>.grid.1of3</span></div>
+			<div class="grid 1of3 offset-4"><span class="gray">.grid.1of3.offset-4</span></div>
+				
+			<div class="grid 1of4"><span>.grid.1of4</span></div>
+			<div class="grid 2of4 keep-shape"><span class="gray">.grid.2of4.keep-shape</span></div>
+			<div class="grid 1of4"><span>.grid.1of4</span></div>
+			
+			<div class="grid"><span>.grid</span></div>	
+			<div class="grid 3of12"><span>.grid.3of12</span></div>	
+			<div class="grid 1of12"><span>.grid.1of12</span></div>	
+			<div class="grid"><span>.grid</span></div>	
+			<div class="grid 1of12"><span>.grid.1of12</span></div>	
+			<div class="grid 2of6"><span>.grid.2of6</span></div>	
+			<div class="grid 1of12"><span>.grid.1of12</span></div>
+
+		<h2 class="grid 1of1 center">Get it</h2>
+
+			<div class="grid 1of2 center keep-shape">
+				<h4>Download</h4>
+				<p>Melody is hosted in a git repository on BitBucket. Just clone to get started.</p>
+				<a href="http://bitbucket.org/molovo/melody" class="grid 1of2"><span>BITBUCKET</span></a> 
+			</div>
+
+			<div class="grid 1of2 center keep-shape">
+				<h4>Link</h3>
+				<p>If you always have to have the latest version of everything, just link directly to melody.css on this site.</p>
+				<a href="css/melody.css" class="grid 1of2"><span>CSS</span></a> 
+			</div>
+
+		<h2 class="grid 1of1 center">Use it</h2>
+			<div class="grid 1of1 keep-shape">
+				<p>Building the grid is as easy as:</p>
+				<pre class="lalign">
+					<code>
+&lt;div class="container"&gt;
+  &lt;div class="grid 1of1"&gt;&lt;/div&gt;
+
+  &lt;div class="grid 1of3"&gt;&lt;/div&gt;
+  &lt;div class="grid 1of3"&gt;&lt;/div&gt;
+  &lt;div class="grid 1of3"&gt;&lt;/div&gt;
+&lt;/div&gt;		
+					</code>
+				</pre>
+			</div>
+	</div>
+</body>
+</html>

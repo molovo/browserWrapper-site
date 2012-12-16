@@ -38,12 +38,12 @@
 
   body { font: 400 20px/24px Helvetica, Arial, sans-serif; }
 
-    h1 { font-size: 54px; line-height: 60px; margin-bottom: 12px; }
-    h2 { font-size: 46px; line-height: 50px; margin-bottom: 10px; }
-    h3 { font-size: 40px; line-height: 44px; margin-bottom: 8px; }
-    h4 { font-size: 34px; line-height: 38px; margin-bottom: 4px; }
-    h5 { font-size: 26px; line-height: 30px; }
-    h6 { font-size: 22px; line-height: 26px; }
+    h1 { font-size: 2.5em; line-height: 1.4em; margin-bottom: 12px; }
+    h2 { font-size: 2.2em; line-height: 1.3em; margin-bottom: 10px; }
+    h3 { font-size: 2em; line-height: 1.2em; margin-bottom: 8px; }
+    h4 { font-size: 1.7em; line-height: 1.2em; margin-bottom: 4px; }
+    h5 { font-size: 1.3em; line-height: 1.2em; }
+    h6 { font-size: 1.1em; line-height: 1.2em; }
     p, ul, ol, dl, blockquote {
         margin-bottom: 12px;
     }
@@ -64,11 +64,11 @@
     width: auto;
     max-width: 960px;
     margin: 0 auto;
-    letter-spacing: -.25em;
+    letter-spacing: -.25em; /* Fixes spacing issues with display: inline-block; */
   }
 
 
-  /* Reset letter spacing for elements not in grid */
+  /* Reset letter spacing for elements in container but not in grid */
 
   .container > * {
     letter-spacing: 0px;
@@ -85,7 +85,7 @@
     margin: 0;
     vertical-align: top;
     position: relative;
-    letter-spacing: 0px;
+    letter-spacing: 0px; /* Resets letter spacing */
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -145,6 +145,48 @@
 
 
 
+/* Offset classes for grid components.
+======================================= */
+
+  .grid.offset-1 {
+    margin-left: 8.3333%;
+  }
+  .grid.offset-2 {
+    margin-left: 16.6666%;
+  }
+  .grid.offset-3 {
+    margin-left: 25%;
+  }
+  .grid.offset-4 {
+    margin-left: 33.3333%;
+  }
+  .grid.offset-5 {
+    margin-left: 41.6666%;
+  }
+  .grid.offset-6 {
+    margin-left: 50%;
+  }
+  .grid.offset-7 {
+    margin-left: 58.3333%;
+  }
+  .grid.offset-8 {
+    margin-left: 66.6666%;
+  }
+  .grid.offset-9 {
+    margin-left: 75%;
+  }
+  .grid.offset-10 {
+    margin-left: 83.3333%;
+  }
+  .grid.offset-11 {
+    margin-left: 96.6666%;
+  }
+  .grid.offset-12 {
+    margin-left: 100%;
+  }
+
+
+
 /* Collapse grid for mobile.
 ======================================= */
 
@@ -158,6 +200,7 @@
 
     .container .grid:not(.stick-to-grid) {
       width: 100%;
+      margin: 0;
     }
   }
 

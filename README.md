@@ -4,7 +4,7 @@
 
 Check the page at <http://molovo.melody.co.uk> to view the features.
 
-Implementing is as easy as:
+Building the grid is as easy as:
 
     <div class="container">
       <div class="grid 1of1"></div>
