@@ -2,7 +2,7 @@
 
 ### *Yet another* responsive OOCSS grid framework
 
-Check the page at <http://molovo.melody.co.uk> to view the features.
+Check the page at <http://melody.molovo.co.uk> to view the features.
 
 Building the grid is as easy as:
 
