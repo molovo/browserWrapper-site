@@ -77,7 +77,8 @@
 				</div>
 				<div id="browser1" class="grid 1of2">
 					<div class="grid 1of1 remove-padding browser-content">
-						<iframe type="text/html" src="http://wikipedia.com"></iframe>
+						<!--<iframe type="text/html" src="http://wikipedia.com"></iframe>-->
+						<object data="http://bbc.co.uk" type="text/html"></object>
 					</div>
 				</div>
 			</div>
@@ -322,7 +323,7 @@ $(<span class="jsString">'#browser'</span>).browserWrapper({
 	<script>
 		jQuery(document).ready(function($) {
 			$('#browser').browserWrapper({os: 'mac', browser: 'chrome', reponsive: 'y'});
-			$('#browser1').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'Wikipedia', browserURL: 'http://wikipedia.org', favicon: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Wikipedia-favicon.png'});
+			$('#browser1').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'BBC', browserURL: 'http://bbc.co.uk', favicon: 'http://static.bbci.co.uk/h4base/0.209.1/img/apple-touch-icon.png'});
 			$('#browser2').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Look at this awesome screenshot', browserURL: 'http://browserwrapper.molovo.co.uk'});
 			$('#browser3').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'browserWrapper', browserURL: 'http://browserwrapper.molovo.co.uk'});
 			$('#browser4').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Options', browserURL: 'http://browserwrapper.molovo.co.uk'});
@@ -341,8 +342,6 @@ $(<span class="jsString">'#browser'</span>).browserWrapper({
 					$('.floating.icon').fadeOut(300);
 				}
 			});
-
-			$('a[href="#top"]').trigger('click');
 		});
 	</script>
 
