@@ -307,20 +307,21 @@ $(<span class="jsString">'#browser'</span>).browserWrapper({
 	<link rel="stylesheet" href="browserWrapper/src/css/browserwrapper.css" />
 	<script src="http://www.kryogenix.org/code/browser/smoothscroll/smoothscroll.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="js/jquery.onImagesLoad.min.js"></script>
 	<script type="text/javascript" src="browserWrapper/src/js/jquery.browserwrapper.js"></script>
 	<script>
 		jQuery(document).ready(function($) {
-			$('#browser').browserWrapper({os: 'mac', browser: 'chrome'});
-			$('#browser1').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'Molovo', browserURL: 'http://molovo.co.uk', favicon: 'http://molovo.co.uk/themes/default/img/favicon.png'});
-			$('#browser2').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Look at this awesome screenshot', browserURL: 'http://browserwrapper.molovo.co.uk'});
-			$('#browser3').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'browserWrapper', browserURL: 'http://browserwrapper.molovo.co.uk'});
-			$('#browser4').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Options', browserURL: 'http://browserwrapper.molovo.co.uk'});
-			$('#browser5').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'Mac/Chrome'});
-			$('#browser6').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Mac/Firefox'});
-			$('#browser7').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'Windows/Chrome'});
-			$('#browser8').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Windows/Firefox'});
-			//$('#browser2').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Wikipedia', browserURL: 'http://wikipedia.co.uk'});
-			//$('#browser3').browserWrapper({os: 'mac', browser: 'firefox'});
+			$(document).onImagesLoad(function() {
+				$('#browser').browserWrapper({os: 'mac', browser: 'chrome'});
+				$('#browser1').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'Molovo', browserURL: 'http://molovo.co.uk', favicon: 'http://molovo.co.uk/themes/default/img/favicon.png'});
+				$('#browser2').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Look at this awesome screenshot', browserURL: 'http://browserwrapper.molovo.co.uk'});
+				$('#browser3').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'browserWrapper', browserURL: 'http://browserwrapper.molovo.co.uk'});
+				$('#browser4').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Options', browserURL: 'http://browserwrapper.molovo.co.uk'});
+				$('#browser5').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'Mac/Chrome'});
+				$('#browser6').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Mac/Firefox'});
+				$('#browser7').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'Windows/Chrome'});
+				$('#browser8').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Windows/Firefox'});
+			});
 		});
 	</script>
 
