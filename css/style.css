@@ -61,6 +61,11 @@
     background: #72CCA7;
     color: white;
   }
+  @media (min-width: 701px) {
+    br.nav-break {
+      display: none;
+    }
+  }
 
   .logo img {
     height: 2em;
@@ -150,6 +155,11 @@
     left: 1.5em;
     display: none;
   }
+    @media (max-width: 700px) {
+      .floating.icon {
+        left: 1em;
+      }
+    }
 
     pre {
       font-family: monospace;
@@ -178,6 +188,11 @@
       font-family: "ff-tisa-web-pro";
       font-size: .75em;
       line-height: 1.5em;
+    }
+    @media (max-width: 700px) {
+      footer p {
+        text-align: center;
+      }
     }
     footer a,
     footer a:visited {
