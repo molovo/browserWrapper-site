@@ -78,7 +78,7 @@
 
   #browser1 .browser-content {
     height: 0;
-    padding-bottom: 150%;
+    padding-bottom: 100%;
     position: relative;
   }
   #browser1 iframe {
@@ -128,11 +128,26 @@
       content: 'G';
     }
 
+  article.warning {
+    background: rgb(240,240,240);
+    font-size: .75em;
+    line-height: 1.5em;
+  }
+  article.warning p:before {
+    font-family: "icomoon";
+    color: red;
+    position: absolute;
+    left: 0;
+    top: 1.5em;
+    content: '!';
+  }
+
   .floating.icon {
     font-family: "icomoon";
     position: fixed;
     top: 1.5em;
     left: 1.5em;
+    display: none;
   }
 
     pre {

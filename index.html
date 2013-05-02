@@ -77,7 +77,7 @@
 				</div>
 				<div id="browser1" class="grid 1of2">
 					<div class="grid 1of1 remove-padding browser-content">
-						<iframe src="http://molovo.co.uk"></iframe>
+						<iframe type="text/html" src="http://wikipedia.com"></iframe>
 					</div>
 				</div>
 			</div>
@@ -92,7 +92,7 @@
 				</div>
 				<div class="grid 1of2">
 					<h4>Sublime Screenshots</h4>
-					<p>Tailor browser</p>
+					<p>Add life, and a touch of realism to boring webpage screenshots.</p>
 				</div>
 			</div>
 		</article>
@@ -203,13 +203,23 @@
 					(Eventually these options will be expanded to include Chrome, Firefox, Safari, Opera and IE, on Windows, Mac or Linux, as well as optional user-agent detection to replicate the user's browser on the page.)
 				</small>
 			</div>
-
-			<div class="grid 1of1"></div>
 		</div>
+
+		<article class="warning">
+			<div class="container">
+				<p class="grid 1of1">
+					<strong>WARNING:</strong> This code is in the early stages of development, and as such is full of bad code with more holes than a tramps knickers, but I decided if I don't put it out there I won't be embarassed enough about it to actually fix it.
+				<br /><br />
+					If you do find any errors, it would be super helpful if you could <a href="http://github.com/molovo/browserWrapper/issues">raise an issue on Github</a>.
+				</p>
+			</div>
+		</article>
 	</section>
 
 	<section id="use">
 		<div class="container">
+			<div class="grid 1of1"></div>
+
 			<h1 class="center">Use It</h1>
 
 			<article class="grid 1of1 html">
@@ -305,22 +315,31 @@ $(<span class="jsString">'#browser'</span>).browserWrapper({
 	</footer>
 
 	<link rel="stylesheet" href="browserWrapper/src/css/browserwrapper.css" />
-	<script src="http://www.kryogenix.org/code/browser/smoothscroll/smoothscroll.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-	<script src="js/jquery.onImagesLoad.min.js"></script>
+	<script type="text/javascript" src="http://www.kryogenix.org/code/browser/smoothscroll/smoothscroll.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.onImagesLoad.min.js"></script>
 	<script type="text/javascript" src="browserWrapper/src/js/jquery.browserwrapper.min.js"></script>
 	<script>
 		jQuery(document).ready(function($) {
-			$('body').onImagesLoad(function() {
-				$('#browser').browserWrapper({os: 'mac', browser: 'chrome'});
-				$('#browser1').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'Molovo', browserURL: 'http://molovo.co.uk', favicon: 'http://molovo.co.uk/themes/default/img/favicon.png'});
-				$('#browser2').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Look at this awesome screenshot', browserURL: 'http://browserwrapper.molovo.co.uk'});
-				$('#browser3').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'browserWrapper', browserURL: 'http://browserwrapper.molovo.co.uk'});
-				$('#browser4').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Options', browserURL: 'http://browserwrapper.molovo.co.uk'});
-				$('#browser5').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'Mac/Chrome'});
-				$('#browser6').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Mac/Firefox'});
-				$('#browser7').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'Windows/Chrome'});
-				$('#browser8').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Windows/Firefox'});
+			$('#browser').browserWrapper({os: 'mac', browser: 'chrome', reponsive: 'y'});
+			$('#browser1').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'Molovo', browserURL: 'http://molovo.co.uk', favicon: 'http://molovo.co.uk/themes/default/img/favicon.png'});
+			$('#browser2').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Look at this awesome screenshot', browserURL: 'http://browserwrapper.molovo.co.uk'});
+			$('#browser3').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'browserWrapper', browserURL: 'http://browserwrapper.molovo.co.uk'});
+			$('#browser4').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Options', browserURL: 'http://browserwrapper.molovo.co.uk'});
+			$('#browser5').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'Mac/Chrome'});
+			$('#browser6').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Mac/Firefox'});
+			$('#browser7').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'Windows/Chrome'});
+			$('#browser8').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Windows/Firefox'});
+
+			var top = $('header#top').height();
+			$(window).scroll(function() {
+				var y = $(this).scrollTop();
+
+				if (y > top) {
+					$('.floating.icon').fadeIn(300);
+				} else {
+					$('.floating.icon').fadeOut(300);
+				}
 			});
 		});
 	</script>
