@@ -311,7 +311,7 @@ $(<span class="jsString">'#browser'</span>).browserWrapper({
 	<script type="text/javascript" src="browserWrapper/src/js/jquery.browserwrapper.js"></script>
 	<script>
 		jQuery(document).ready(function($) {
-			$(document).onImagesLoad(function() {
+			$('body').onImagesLoad(function() {
 				$('#browser').browserWrapper({os: 'mac', browser: 'chrome'});
 				$('#browser1').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'Molovo', browserURL: 'http://molovo.co.uk', favicon: 'http://molovo.co.uk/themes/default/img/favicon.png'});
 				$('#browser2').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Look at this awesome screenshot', browserURL: 'http://browserwrapper.molovo.co.uk'});
