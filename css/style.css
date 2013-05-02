@@ -1,0 +1,196 @@
+/* Colors
+=================================== */
+  body { color: rgb(51,71,61); }
+
+  a, a:visited { text-decoration: none; color: inherit; font-weight: 600; }
+
+  h1 { color: #6EC9D9; }
+
+  h1, h2, h3, h4 {
+    font-family: "ff-tisa-web-pro";
+    font-weight: 700;
+  }
+
+  h5, h6 {
+    font-family: "freight-sans-pro";
+    font-weight: 500;
+  }
+
+  hr {
+    height: 0px;
+    width: 40%;
+    margin: 3em auto;
+    border: 0;
+    border-bottom: 1px solid rgb(240,240,240);
+  }
+
+  .plum { color: #4C2034; }
+  .plumbg { background: #4C2034; }
+  /*.blue { color: #65A2B7; }
+  .bluebg { background: #65A2B7; }
+  .cream { color: #F3EED3; }
+  .creambg { background: #F3EED3; }
+  .green { color: #A1CFB8; }
+  .greenbg { background: #A1CFB8; }
+  .red { color: #ED5F4C; }
+  .redbg { background: #ED5F4C; }*/
+  .white { color: white; }
+  .whitebg { background: white; }
+
+  iframe {
+    height: 300px;
+  }
+
+  header {
+    background: rgb(240,240,240);
+  }
+
+  header a {
+    font-family: "freight-sans-pro";
+    font-weight: 500;
+    padding: .25em .75em;
+    border-radius: 5px;
+    -webkit-transition: all .25s ease-in-out;
+       -moz-transition: all .25s ease-in-out;
+        -ms-transition: all .25s ease-in-out;
+         -o-transition: all .25s ease-in-out;
+            transition: all .25s ease-in-out;
+  }
+
+  nav a:hover {
+    background: #72CCA7;
+    color: white;
+  }
+
+  .logo img {
+    height: 2em;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+  }
+
+  #browser .browser-content {
+    background: url('http://bushwick.molovo.co.uk/content/article-image.jpg.jpg') center no-repeat;
+    background-size: cover;
+    color: white;
+    text-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+  }
+
+  #browser1 .browser-content {
+    height: 0;
+    padding-bottom: 150%;
+    position: relative;
+  }
+  #browser1 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #browser3 .browser-content {
+    background: white;
+  }
+
+  .featurelink,
+  .featurelink:visited {
+    padding: .5em .75em .6em 2em;
+    margin: 0 .25em;
+    border-radius: 5px;
+    background: #72CCA7;
+    color: white;
+    font-family: "freight-sans-pro";
+    font-weight: 500;
+    position: relative;
+    font-size: .75em;
+    -webkit-transition: background .25s ease-in-out;
+       -moz-transition: background .25s ease-in-out;
+        -ms-transition: background .25s ease-in-out;
+         -o-transition: background .25s ease-in-out;
+            transition: background .25s ease-in-out;
+  }
+    .featurelink:hover {
+      background: #6EC9D9;
+    }
+    .featurelink:before {
+      font-family: 'icomoon';
+      position: absolute;
+      left: .5em;
+      top: .2em;
+    }
+    .featurelink.download:before {
+      content: 'D';
+    }
+    .featurelink.github:before {
+      content: 'G';
+    }
+
+  .floating.icon {
+    font-family: "icomoon";
+    position: fixed;
+    top: 1.5em;
+    left: 1.5em;
+  }
+
+    pre {
+      font-family: monospace;
+      font-size: .6em;
+      line-height: 1.5em;
+      font-weight: 700;
+      background: rgb(240,240,240);
+      padding: 0 1.5em;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    pre .comment {
+      opacity: 0.5;
+      font-weight: 400;
+    }
+
+    pre .jsString {
+      color: #72CCA7;
+      font-weight: 400;
+    }
+
+    footer {
+      background: #72CCA7;
+      color: white;
+      font-family: "ff-tisa-web-pro";
+      font-size: .75em;
+      line-height: 1.5em;
+    }
+    footer a,
+    footer a:visited {
+      font-weight: 700;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+@media screen and (min-width: 701px) {
+	.mobile { display: none !important; }
+}
+
+@media screen and (max-width: 700px) {
+	.nonmobile { display: none !important; }
+}
+
+  .remove-bottom {
+    margin-bottom: 0;
+  }
+
+  @font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/icomoon.eot');
+    src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.woff') format('woff'),
+      url('../fonts/icomoon.ttf') format('truetype'),
+      url('../fonts/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }

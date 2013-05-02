@@ -5,7 +5,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Melody - by molovo</title>
+	<title>browserWrapper - a jQuery plugin</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -16,216 +16,313 @@
 	<!-- CSS
   ================================================== -->
 	<link rel="stylesheet" href="css/melody.css">
+	<link rel="stylesheet" href="css/style.css">
 
 	<!-- Favicons
   ================================================== -->
-	<link rel="shortcut icon" href="img/favicon.png">
+	<link rel="shortcut icon" href="img/favicon.png?v=2">
 
-	<script type="text/javascript" src="//use.typekit.net/daj1asl.js"></script>
+	<script type="text/javascript" src="//use.typekit.net/enp7tmc.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-	<style>
-		body {
-			font-family: "freight-sans-pro";
-			font-weight: 400;
-			color: rgb(71,81,91);
-		}
-
-		h1 { 
-			font-family: "skolar";
-			color: rgb(225,120,98);
-		}
-
-		h2 {
-			font-family: "skolar";
-			color: rgb(131,141,151);
-		}
-
-		strong { color: rgb(225,120,98); }
-
-		.grid span {
-			background: rgb(225,120,98);
-			text-align: center;
-			color: white;
-			width: 100%;
-			display: inline-block;
-			padding: 15px 0;
-			font-weight: 500;
-			border-radius: 2px;
-			font-family: monospace;
-			font-size: 14px;
-		}
-
-		.grid span.gray{
-			background: rgb(131,141,151);
-		}
-
-		a.grid span { font-family: "freight-sans-pro"; font-size: 100%; }
-		a.grid:hover span {
-			background: rgb(98,225,177);
-			color: rgb(71,81,91);
-		}
-
-		pre {
-			overflow-x: auto;
-			overflow-y: hidden;
-		}
-
-		code {
-			font-family: monospace;
-			font-size: 16px;
-		}
-
-		header,
-		footer {
-			color: white;
-			background: rgb(225,120,98);
-		}
-
-		header h1 {
-			color: white;
-		}
-
-		header h3 {
-			font-weight: 300;
-		}
-
-		footer a,
-		footer a:visited {
-			color: white;
-			text-decoration: none;
-		}
-
-		footer a:hover {
-			text-decoration: underline;
-		}
-	</style>
 
 </head>
 <body>
 
-	<header>
+	<a href="#top" class="floating icon" title="Back to Top">U</a>
+
+	<header id="top">
 		<div class="container">
 			<div class="grid 1of1"> </div>
-			
+
 			<div class="grid 1of2">
-				<h1 class="red">Melody</h1>
-				<h3 class="dark"><em>Yet another</em> responsive OOCSS grid framework.</h3>
+				<a href="#top" class="logo"><img src="img/logo.png" alt="Logo"> browserWrapper</a>
 			</div>
-		
+
+			<nav class="grid 1of2 ralign">
+				<a href="#features">Features</a>
+				<a href="#family">Family</a>
+				<a href="#get">Get it</a>
+				<a href="#use">Use it</a>
+			</nav>
+
 			<div class="grid 1of1"> </div>
 		</div>
 	</header>
 
-	<div class="container">		
-		<div class="grid 1of1"> </div>
-		<h5 class="grid 1of1 center keep-shape">Welcome to Melody, an extremely lightweight CSS grid framework. I've adapted and borrowed elements from a number of other frameworks to evolve this into something that meets my needs, and done things a little differently to make it more flexible.</h5>
+	<section id="intro">
+		<div class="container">
+			<div class="grid 1of1"></div>
 
-		<h2 class="grid 1of1 center">Features</h2>
-
-			<p class="grid 1of2 center keep-shape">
-				Just one <strong>tiny</strong> .css file, with as little default styling as possible, and a strong emphasis on <strong>white space</strong> to give the layout breathing room.
-			</p>
-
-			<p class="grid 1of2 center keep-shape">
-				<strong>No floats</strong> means no dodgy IE hacks to try and clear them. Just the nice and clean, <strong>display: inline-block;</strong>
-			</p>
-
-			<p class="grid 1of2 center keep-shape">
-				Uses <strong>padding</strong> and <strong>box-sizing: border-box;</strong> instead of margin for spacing, which makes it much easier to create a grid-within-a-grid or <strong>marginless layouts</strong>. If you need spacing, then style the content; If you need a grid <b>without spacing</b>, then style the grid itself, or use the class <strong>.remove-padding</strong>. 
-			</p>
-
-			<p class="grid 1of2 center keep-shape">
-				Uses the class <strong>.stick-to-grid</strong> to preserve the width and offset of grid elements at mobile screen sizes.
-			</p>
-
-			<p class="grid 1of2 center keep-shape">
-				Uses the class <strong>.keep-shape</strong> to add additional padding to grid elements to keep them at 960-grid size when the grid expands to 1280 wide on large screens.
-			</p>
-
-			<p class="grid 1of2 center keep-shape">
-				Uses the class <strong>.offset-<em>n</em></strong> to add left-margin to an element to create an offset. The value of <em>n</em> is the number of columns (1-12) for the offset. 
-			</p>
-
-		<h2 class="grid 1of1 center">Example</h2>
-
-			<p class="grid 1of1 center keep-shape">
-				Basic grid shown in <strong>red</strong>. Elements with additional classes shown in <strong style="color:rgb(131,141,151);">gray</strong>.
-			</p>
-
-			<div class="grid 1of1"><span>.grid.1of1</span></div>
-			
-			<div class="grid 1of2 keep-shape stick-to-grid" title=".grid.1of2.keep-shape.stick-to-grid"><span class="gray">.grid.1of2.keep-shape.stick-to-grid</span></div>
-			<div class="grid 1of2 stick-to-grid"><span class="gray">.grid.1of2.stick-to-grid</span></div>
-
-			<div class="grid 2of2"><span>.grid.2of2</span></div>
-			
-			<div class="grid 1of3 stick-to-grid"><span class="gray">.grid.1of3.stick-to-grid</span></div>
-			<div class="grid 1of3 stick-to-grid"><span class="gray">.grid.1of3.stick-to-grid</span></div>
-			<div class="grid 1of3 stick-to-grid"><span class="gray">.grid.1of3.stick-to-grid</span></div>
-				
-			<div class="grid 2of3 offset-4 stick-to-grid"><span class="gray">.grid.2of3.offset-4.stick-to-grid</span></div>	
-			<div class="grid 1of3"><span>.grid.1of3</span></div>
-			<div class="grid 1of3 offset-4"><span class="gray">.grid.1of3.offset-4</span></div>
-				
-			<div class="grid 1of4"><span>.grid.1of4</span></div>
-			<div class="grid 2of4 keep-shape"><span class="gray">.grid.2of4.keep-shape</span></div>
-			<div class="grid 1of4"><span>.grid.1of4</span></div>
-			
-			<div class="grid"><span>.grid</span></div>	
-			<div class="grid 3of12"><span>.grid.3of12</span></div>	
-			<div class="grid 1of12"><span>.grid.1of12</span></div>	
-			<div class="grid"><span>.grid</span></div>	
-			<div class="grid 1of12"><span>.grid.1of12</span></div>	
-			<div class="grid 2of6"><span>.grid.2of6</span></div>	
-			<div class="grid 1of12"><span>.grid.1of12</span></div>
-
-		<h2 class="grid 1of1 center">Get it</h2>
-
-			<div class="grid 1of2 center keep-shape">
-				<h4>Download</h4>
-				<p>Melody is hosted in a git repository on BitBucket. Just clone to get started.</p>
-				<a href="http://bitbucket.org/molovo/melody" class="grid 1of2"><span>BITBUCKET</span></a> 
+			<div class="grid 10of12 offset-1 center" id="browser">
+				<div class="grid 1of1 browser-content">
+					<div class="grid 1of1"> </div>
+					<h6 class="grid 1of1 white">browserWrapper is a jQuery plugin, which builds a scalable browser window, at any size, around any element in the DOM.</h6>
+					<div class="grid 1of1"> </div>
+				</div>
 			</div>
 
-			<div class="grid 1of2 center keep-shape">
-				<h4>Link</h3>
-				<p>If you always have to have the latest version of everything, just link directly to melody.css on this site.</p>
-				<a href="css/melody.css" class="grid 1of2"><span>CSS</span></a> 
+			<div class="grid 1of1"></div>
+		</div>
+	</section>
+
+	<section id="features">
+
+		<h1 class="grid 1of1 center blue">Features</h1>
+
+		<article class="iframes">
+			<div class="container">
+				<div class="grid 1of2">
+					<h4>Inspiring Iframes</h4>
+					<p>Why have a plain box, when you can have a living browser window right on your web page?</p>
+				</div>
+				<div id="browser1" class="grid 1of2">
+					<div class="grid 1of1 remove-padding browser-content">
+						<iframe src="http://molovo.co.uk"></iframe>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<hr />
+
+		<article class="screenshots">
+			<div class="container">
+				<div id="browser2" class="grid 1of2">
+					<img src="img/screenshot.png" alt="Screenshot" class="grid 1of1 remove-padding browser-content" />
+				</div>
+				<div class="grid 1of2">
+					<h4>Sublime Screenshots</h4>
+					<p>Tailor browser</p>
+				</div>
+			</div>
+		</article>
+
+		<hr />
+
+		<article class="responsive">
+			<div class="container">
+				<div class="grid 1of2">
+					<h4>Rambunctiously Responsive</h4>
+					<p>browserWrapper works in responsive layouts, meaning visitors will always see the window controls at 1:1 scale.</p>
+				</div>
+				<div id="browser3" class="grid 1of2">
+					<div class="grid 1of1 browser-content center">
+						<h4>Look at me, I'm responsive, see me shrink!</h4>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<hr />
+
+		<article class="configure">
+			<div class="container">
+				<div id="browser4" class="grid 1of2">
+					<div class="grid 1of1 remove-padding browser-content">
+						<pre class="grid 1of1 remove-padding">
+							<code>
+  .browserWrapper({
+    os: <span class="jsString">'windows'</span>,
+    browser: <span class="jsString">'firefox'</span>,
+    url: <span class="jsString">'http://browserwrapper.molovo.co.uk'</span>,
+    title: <span class="jsString">'Options'</span>,
+    favicon: <span class="jsString">'/img/favicon.ico'</span>
+  });</code>
+						</pre>
+					</div>
+				</div>
+				<div class="grid 1of2">
+					<h4>Contemptuously Configurable</h4>
+					<p>Tailor the browser window to match the content within, with customisable URLs, Titles and favicons.</p>
+				</div>
+
+				<div class="grid 1of1"></div>
+			</div>
+		</article>
+	</section>
+
+	<section id="family">
+		<div class="container">
+			<div class="grid 1of1"></div>
+			<h1 class="center">The Family</h1>
+			<article id="browser5" class="grid 1of2">
+				<div class="grid 1of1 remove-padding browser-content plumbg white center">
+					<h3 class="grid 1of1">Chrome/Mac</h3>
+
+				</div>
+			</article>
+			<article id="browser6" class="grid 1of2">
+				<div class="grid 1of1 remove-padding browser-content plumbg white center">
+					<h3 class="grid 1of1">Chrome/Windows</h3>
+
+				</div>
+			</article>
+			<article id="browser7" class="grid 1of2">
+				<div class="grid 1of1 remove-padding browser-content plumbg white center">
+					<h3 class="grid 1of1">Firefox/Mac</h3>
+
+				</div>
+			</article>
+			<article id="browser8" class="grid 1of2">
+				<div class="grid 1of1 remove-padding browser-content plumbg white center">
+					<h3 class="grid 1of1">Firefox/Windows</h3>
+
+				</div>
+			</article>
+
+			<div class="grid 1of1"></div>
+		</div>
+	</section>
+
+	<section id="get">
+		<div class="container">
+			<h1 class="center">Get it</h1>
+			<h3 class="center">Two Flavours</h3>
+
+			<div class="grid 1of2 center">
+				<h4>Lite</h4>
+				<p class="grid 1of1 plum">
+					Slimmed down version, containing just the Chrome browser on Mac OS.
+				</p>
+				<div class="grid 1of1">
+					<a href="https://github.com/molovo/browserWrapper-lite/archive/master.zip" class="featurelink download">Download</a>
+					<a href="https://github.com/molovo/browserWrapper-lite" class="featurelink github">View Repo</a>
+				</div>
+
+			</div>
+			<div class="grid 1of2 center">
+				<h4>Mighty</h4>
+				<p class="grid 1of1 plum">
+					Full-fat version. Includes Chrome and Firefox on Windows and Mac.
+				</p>
+				<div class="grid 1of1">
+					<a href="https://github.com/molovo/browserWrapper/archive/master.zip" class="featurelink download">Download</a>
+					<a href="https://github.com/molovo/browserWrapper" class="featurelink github">View Repo</a>
+				</div>
+				<small class="grid 1of1 plum">
+					(Eventually these options will be expanded to include Chrome, Firefox, Safari, Opera and IE, on Windows, Mac or Linux, as well as optional user-agent detection to replicate the user's browser on the page.)
+				</small>
 			</div>
 
-		<h2 class="grid 1of1 center">Use it</h2>
-			<div class="grid 1of1 keep-shape">
-				<p>Just start your HTML with the following:</p>
-				<pre class="lalign">
+			<div class="grid 1of1"></div>
+		</div>
+	</section>
+
+	<section id="use">
+		<div class="container">
+			<h1 class="center">Use It</h1>
+
+			<article class="grid 1of1 html">
+				<h4>HTML</h4>
+				<p>Two elements are all that is needed. They can be any element, as long as .browser-content is within the called element, browserWrapper will do the rest.</p>
+				<pre>
 					<code>
-	&lt;!DOCTYPE html&gt;
-	&lt;html&gt;
-	&lt;head&gt;
-		&lt;link rel="stylesheet" href="css/melody.css" /&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;div class="container"&gt;
-		  &lt;div class="grid 1of1"&gt;&lt;/div&gt;
+<span class="comment">&lt;!-- Add the CSS and JS files --&gt;</span>
+&lt;link rel=<span class="jsString">"stylesheet"</span> href=<span class="jsString">"browserWrapper/src/css/browserwrapper.css"</span> /&gt;
+&lt;script type=<span class="jsString">"text/javascript"</span> src=<span class="jsString">"browserWrapper/src/js/jquery.browserwrapper.js"</span>&gt;&lt;/script&gt;
 
-		  &lt;div class="grid 1of3"&gt;&lt;/div&gt;
-		  &lt;div class="grid 1of3"&gt;&lt;/div&gt;
-		  &lt;div class="grid 1of3"&gt;&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/body&gt;
-	&lt;/html&gt;
+<span class="comment">&lt;!-- Create your browser window --&gt;</span>
+&lt;div id=<span class="jsString">"browser"</span>&gt;
+  &lt;div class=<span class="jsString">"browser-content"</span>&gt;
+    <span class="comment">&lt;!-- Your content goes here --&gt;</span>
+  &lt;/div&gt;
+&lt;/div&gt;
 					</code>
 				</pre>
-			</div>
-	</div>
+			</article>
+
+			<article class="grid 1of1 jquery">
+				<h4>jQuery</h4>
+				<p>Just call .browserWrapper() on document.ready to get started.</p>
+				<pre>
+					<code>
+jQuery(document).ready(function ($) {
+  $(<span class="jsString">'#browser'</span>).browserWrapper();
+});
+					</code>
+				</pre>
+			</article>
+
+			<article class="grid 1of1 options">
+				<h4>Options</h4>
+				<p>If you want to be really picky, just apply any of the following options:</p>
+				<pre>
+					<code>
+$(<span class="jsString">'#browser'</span>).browserWrapper({
+  <span class="comment">// title to appear on tab</span>
+  browserTitle:   <span class="jsString">'Your Awesome Title'</span>,
+
+  <span class="comment">// URL to appear in address bar</span>
+  browserURL:     <span class="jsString">'http://your.awesome.url.com'</span>,
+
+  <span class="comment">// URL for favicon to appear on tab</span>
+  favicon:        <span class="jsString">'http://browserwrapper.molovo.co.uk/img/favicon.png'</span>,
+
+  <span class="comment">// path to browserWrapper</span>
+  filePath:       <span class="jsString">'browserWrapper-premium/'</span>,
+
+  <span class="comment">// adds a box-shadow to the browser, follows CSS syntax, use '0' to remove</span>
+  shadow:         <span class="jsString">'0px 5px 15px rgba(0,0,0,0.3)'</span>,
+
+  <span class="comment">// if 'y', reloads page on window.resize to redraw browser window at a different size</span>
+  responsive:     <span class="jsString">'n'</span>,
+
+  <span class="comment">// the OS for the window border</span>
+  os:             <span class="jsString">'mac'</span>,
+
+  <span class="comment">// the browser whose controls to mimick</span>
+  browser:        <span class="jsString">'chrome'</span>
+});
+					</code>
+				</pre>
+			</article>
+
+			<div class="grid 1of1"></div>
+		</div>
+	</section>
 
 	<footer>
 		<div class="container">
-			<div class="grid 1of1"> </div>
-			<p class="grid 1of2"><a href="http://license.visualidiot.com">Released under the ☺ Licence.</a></p>
-			<p class="grid 1of2 ralign"><a href="http://molovo.co.uk">Created with love, by molovo</a></p>
-			<div class="grid 1of1"> </div>
+			<div class="grid 1of1"></div>
+
+			<div class="grid 1of2">
+				<p>
+					&copy;2013 <a href="http://molovo.co.uk">molovo</a>.<br />
+					All Rights Reserved.
+				</p>
+			</div>
+
+			<div class="grid 1of2 ralign">
+				<p class="remove-bottom">
+					Created with love, by <a href="http://molovo.co.uk">molovo</a>.<br />
+					Site built with <a href="http://melodycss.co">Melody</a>.<br />
+					Follow me <a href="http://twitter.com/molovo">on Twitter</a>.
+				</p>
+			</div>
+
+			<div class="grid 1of1"></div>
 		</div>
 	</footer>
+
+	<link rel="stylesheet" href="browserWrapper/src/css/browserwrapper.css" />
+	<script src="http://www.kryogenix.org/code/browser/smoothscroll/smoothscroll.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="browserWrapper/src/js/jquery.browserwrapper.js"></script>
+	<script>
+		jQuery(document).ready(function($) {
+			$('#browser').browserWrapper({os: 'mac', browser: 'chrome'});
+			$('#browser1').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'Molovo', browserURL: 'http://molovo.co.uk', favicon: 'http://molovo.co.uk/themes/default/img/favicon.png'});
+			$('#browser2').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Look at this awesome screenshot', browserURL: 'http://browserwrapper.molovo.co.uk'});
+			$('#browser3').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'browserWrapper', browserURL: 'http://browserwrapper.molovo.co.uk'});
+			$('#browser4').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Options', browserURL: 'http://browserwrapper.molovo.co.uk'});
+			$('#browser5').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'Mac/Chrome'});
+			$('#browser6').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Mac/Firefox'});
+			$('#browser7').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'Windows/Chrome'});
+			$('#browser8').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Windows/Firefox'});
+			//$('#browser2').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Wikipedia', browserURL: 'http://wikipedia.co.uk'});
+			//$('#browser3').browserWrapper({os: 'mac', browser: 'firefox'});
+		});
+	</script>
+
 </body>
 </html>
