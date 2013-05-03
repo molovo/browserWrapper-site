@@ -195,7 +195,7 @@
 					Slimmed down version, containing just the Chrome browser on Mac OS.
 				</p>
 				<div class="grid 1of1">
-					<a href="https://github.com/molovo/browserWrapper-lite/archive/master.zip" class="featurelink download">Download</a>
+					<a href="https://github.com/molovo/browserWrapper-lite/archive/master.zip" class="featurelink download" id="lite-download">Download<span id="lite-count" class="counter"></span></a>
 					<a href="https://github.com/molovo/browserWrapper-lite" class="featurelink github">View Repo</a>
 				</div>
 
@@ -206,7 +206,7 @@
 					Full-fat version. Includes Chrome and Firefox on Windows and Mac.
 				</p>
 				<div class="grid 1of1">
-					<a href="https://github.com/molovo/browserWrapper/archive/master.zip" class="featurelink download">Download</a>
+					<a href="https://github.com/molovo/browserWrapper/archive/master.zip" class="featurelink download" id="mighty-download">Download<span id="mighty-count" class="counter"></span></a>
 					<a href="https://github.com/molovo/browserWrapper" class="featurelink github">View Repo</a>
 				</div>
 				<small class="grid 1of1 plum">
@@ -345,6 +345,45 @@ $(<span class="jsString">'#browser'</span>).browserWrapper({
 					$('.floating.icon').fadeIn(300);
 				} else {
 					$('.floating.icon').fadeOut(300);
+				}
+			});
+
+			$('#lite-download').click(function(event) {
+				event.preventDefault();
+				var redirectUrl = $(this).attr('href');
+				$.ajax({
+					url: "lite-downloads.php",
+					success: function(response) {
+						var count = $('#lite-count').html();
+						$('#lite-count').html(parseFloat(count) + 1);
+						window.location.href = redirectUrl;
+					}
+				});
+				return true;
+			});
+
+			$('#mighty-download').click(function(event) {
+				event.preventDefault();
+				var redirectUrl = $(this).attr('href');
+				$.ajax({
+					url: "mighty-downloads.php",
+					success: function(response) {
+						var count = $('#mighty-count').html();
+						$('#mighty-count').html(parseFloat(count) + 1);
+						window.location.href = redirectUrl;
+					}
+				});
+				return true;
+			});
+
+			$.ajax({
+				url: "downloads.php",
+				success: function(data) {
+					var data = JSON.stringify(data, null, 4);
+					var data = $.parseJSON(data);
+
+					$('#lite-count').html(data.lite);
+					$('#mighty-count').html(data.mighty);
 				}
 			});
 		});

@@ -149,6 +149,151 @@
     content: '!';
   }
 
+  .counter {
+    background: rgb(240,240,240);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -150%;
+    margin: 0 auto;
+    padding: .25em .75em;
+    white-space: nowrap;
+    color: rgb(51,71,61);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+    -webkit-animation-fill-mode:both;
+       -moz-animation-fill-mode:both;
+        -ms-animation-fill-mode:both;
+         -o-animation-fill-mode:both;
+            animation-fill-mode:both;
+    -webkit-animation-duration:1s;
+       -moz-animation-duration:1s;
+        -ms-animation-duration:1s;
+         -o-animation-duration:1s;
+            animation-duration:1s;
+    -webkit-animation-name: fadeOutDown;
+    -moz-animation-name: fadeOutDown;
+    -o-animation-name: fadeOutDown;
+    animation-name: fadeOutDown;
+  }
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  } 100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fadeOutDown {
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  } 0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeOutDown {
+  100% {
+    opacity: 0;
+    -moz-transform: translateY(20px);
+  }
+
+  0% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeOutDown {
+  100% {
+    opacity: 0;
+    -o-transform: translateY(20px);
+  }
+
+  0% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDown {
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.featurelink.download:hover > .counter {
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  -o-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+  .counter:before {
+    content: 'Downloads: ';
+  }
+  .counter:after {
+    content: '';
+    background: rgb(240,240,240);
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -.5em;
+    margin-top: -.5em;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+
   .floating.icon {
     font-family: "icomoon";
     position: fixed;
