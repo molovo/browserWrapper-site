@@ -22,7 +22,7 @@
     width: 40%;
     margin: 3em auto;
     border: 0;
-    border-bottom: 1px solid rgb(240,240,240);
+    border-bottom: 1px solid rgb(245,245,245);
   }
 
   .plum { color: #4C2034; }
@@ -43,7 +43,7 @@
   }
 
   header {
-    background: rgb(240,240,240);
+    background: rgb(245,245,245);
   }
 
   header a {
@@ -136,7 +136,7 @@
     }
 
   article.warning {
-    background: rgb(240,240,240);
+    background: rgb(245,245,245);
     font-size: .75em;
     line-height: 1.5em;
   }
@@ -150,7 +150,7 @@
   }
 
   .counter {
-    background: rgb(240,240,240);
+    background: rgb(245,245,245);
     display: inline-block;
     position: absolute;
     left: 0;
@@ -167,11 +167,11 @@
         -ms-animation-fill-mode:both;
          -o-animation-fill-mode:both;
             animation-fill-mode:both;
-    -webkit-animation-duration:1s;
-       -moz-animation-duration:1s;
-        -ms-animation-duration:1s;
-         -o-animation-duration:1s;
-            animation-duration:1s;
+    -webkit-animation-duration:.25s;
+       -moz-animation-duration:.25s;
+        -ms-animation-duration:.25s;
+         -o-animation-duration:.25s;
+            animation-duration:.25s;
     -webkit-animation-name: fadeOutDown;
     -moz-animation-name: fadeOutDown;
     -o-animation-name: fadeOutDown;
@@ -280,7 +280,7 @@
   }
   .counter:after {
     content: '';
-    background: rgb(240,240,240);
+    background: rgb(245,245,245);
     width: 1em;
     height: 1em;
     position: absolute;
@@ -314,10 +314,22 @@
       font-size: .6em;
       line-height: 1.5em;
       font-weight: 700;
-      background: rgb(240,240,240);
+      background: rgb(245,245,245);
       padding: 0 1.5em;
       border-radius: 5px;
       overflow-x: auto;
+    }
+
+    code {
+      font-family: monospace;
+      font-size: .75em;
+      background: rgb(245,245,245);
+      padding: .1em .25em .2em;
+      border-radius: 5px;
+    }
+
+    pre > code {
+      font-size: 1em;
     }
 
     pre .comment {
@@ -325,9 +337,18 @@
       font-weight: 400;
     }
 
-    pre .jsString {
+    pre .string {
       color: #72CCA7;
       font-weight: 400;
+    }
+
+    pre .object {
+      color: rgba(76,32,52,0.5);
+    }
+
+    pre .literal {
+      font-style: italic;
+      color: #6EC9D9;
     }
 
     footer {

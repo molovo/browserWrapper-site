@@ -132,11 +132,11 @@
 						<pre class="grid 1of1 remove-padding">
 							<code>
   .browserWrapper({
-    os: <span class="jsString">'windows'</span>,
-    browser: <span class="jsString">'firefox'</span>,
-    url: <span class="jsString">'http://browserwrapper.molovo.co.uk'</span>,
-    title: <span class="jsString">'Options'</span>,
-    favicon: <span class="jsString">'/img/favicon.ico'</span>
+    os: <span class="string">'windows'</span>,
+    browser: <span class="string">'firefox'</span>,
+    url: <span class="string">'http://browserwrapper.molovo.co.uk'</span>,
+    title: <span class="string">'Options'</span>,
+    favicon: <span class="string">'/img/favicon.ico'</span>
   });</code>
 						</pre>
 					</div>
@@ -234,16 +234,16 @@
 
 			<article class="grid 1of1 html">
 				<h4>HTML</h4>
-				<p>Two elements are all that is needed. They can be any element, as long as .browser-content is within the called element, browserWrapper will do the rest.</p>
+				<p>Two elements are all that is needed. They can be any element, as long as <code>.browser-content</code> is within the called element, browserWrapper will do the rest.</p>
 				<pre>
 					<code>
 <span class="comment">&lt;!-- Add the CSS and JS files --&gt;</span>
-&lt;link rel=<span class="jsString">"stylesheet"</span> href=<span class="jsString">"browserWrapper/src/css/browserwrapper.css"</span> /&gt;
-&lt;script type=<span class="jsString">"text/javascript"</span> src=<span class="jsString">"browserWrapper/src/js/jquery.browserwrapper.min.js"</span>&gt;&lt;/script&gt;
+&lt;link <span class="object">rel</span>=<span class="string">"stylesheet"</span> <span class="object">href</span>=<span class="string">"browserWrapper/src/css/browserwrapper.css"</span> /&gt;
+&lt;script <span class="object">type</span>=<span class="string">"text/javascript"</span> <span class="object">src</span>=<span class="string">"browserWrapper/src/js/jquery.browserwrapper.min.js"</span>&gt;&lt;/script&gt;
 
 <span class="comment">&lt;!-- Create your browser window --&gt;</span>
-&lt;div id=<span class="jsString">"browser"</span>&gt;
-  &lt;div class=<span class="jsString">"browser-content"</span>&gt;
+&lt;div <span class="object">id</span>=<span class="string">"browser"</span>&gt;
+  &lt;div <span class="object">class</span>=<span class="string">"browser-content"</span>&gt;
     <span class="comment">&lt;!-- Your content goes here --&gt;</span>
   &lt;/div&gt;
 &lt;/div&gt;
@@ -253,11 +253,11 @@
 
 			<article class="grid 1of1 jquery">
 				<h4>jQuery</h4>
-				<p>Just call .browserWrapper() on document.ready to get started.</p>
+				<p>Just call <code>.browserWrapper()</code> on <code>document.ready</code> to get started.</p>
 				<pre>
 					<code>
-jQuery(document).ready(function ($) {
-  $(<span class="jsString">'#browser'</span>).browserWrapper();
+jQuery(<span class="literal">document</span>).ready(<span class="literal">function</span> (<span class="object">$</span>) {
+  <span class="object">$</span>(<span class="string">'#browser'</span>).browserWrapper();
 });
 					</code>
 				</pre>
@@ -268,27 +268,27 @@ jQuery(document).ready(function ($) {
 				<p>If you want to be really picky, just apply any of the following options:</p>
 				<pre>
 					<code>
-$(<span class="jsString">'#browser'</span>).browserWrapper({
+<span class="object">$</span>(<span class="string">'#browser'</span>).browserWrapper({
   <span class="comment">// title to appear on tab</span>
-  browserTitle:   <span class="jsString">'Your Awesome Title'</span>,
+  browserTitle:   <span class="string">'Your Awesome Title'</span>,
 
   <span class="comment">// URL to appear in address bar</span>
-  browserURL:     <span class="jsString">'http://your.awesome.url.com'</span>,
+  browserURL:     <span class="string">'http://your.awesome.url.com'</span>,
 
   <span class="comment">// URL for favicon to appear on tab</span>
-  favicon:        <span class="jsString">'http://browserwrapper.molovo.co.uk/img/favicon.png'</span>,
+  favicon:        <span class="string">'http://browserwrapper.molovo.co.uk/img/favicon.png'</span>,
 
   <span class="comment">// path to browserWrapper</span>
-  filePath:       <span class="jsString">'browserWrapper/src/'</span>,
+  filePath:       <span class="string">'browserWrapper/src/'</span>,
 
   <span class="comment">// adds a box-shadow to the browser, follows CSS syntax, use '0' to remove</span>
-  shadow:         <span class="jsString">'0px 5px 15px rgba(0,0,0,0.3)'</span>,
+  shadow:         <span class="string">'0px 5px 15px rgba(0,0,0,0.3)'</span>,
 
   <span class="comment">// the OS for the window border</span>
-  os:             <span class="jsString">'mac'</span>,
+  os:             <span class="string">'mac'</span>,
 
   <span class="comment">// the browser whose controls to mimick</span>
-  browser:        <span class="jsString">'chrome'</span>
+  browser:        <span class="string">'chrome'</span>
 });
 					</code>
 				</pre>
