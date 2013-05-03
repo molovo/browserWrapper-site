@@ -3,6 +3,7 @@
   body { color: rgb(51,71,61); }
 
   a, a:visited { text-decoration: none; color: inherit; font-weight: 600; }
+  p a:hover { text-decoration: underline; }
 
   h1 { color: #6EC9D9; }
 
@@ -154,6 +155,7 @@
     top: 1.5em;
     left: 1.5em;
     display: none;
+    font-weight: 400;
   }
     @media (max-width: 700px) {
       .floating.icon {
