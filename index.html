@@ -270,13 +270,10 @@ $(<span class="jsString">'#browser'</span>).browserWrapper({
   favicon:        <span class="jsString">'http://browserwrapper.molovo.co.uk/img/favicon.png'</span>,
 
   <span class="comment">// path to browserWrapper</span>
-  filePath:       <span class="jsString">'browserWrapper/'</span>,
+  filePath:       <span class="jsString">'browserWrapper/src/'</span>,
 
   <span class="comment">// adds a box-shadow to the browser, follows CSS syntax, use '0' to remove</span>
   shadow:         <span class="jsString">'0px 5px 15px rgba(0,0,0,0.3)'</span>,
-
-  <span class="comment">// if 'y', reloads page on window.resize to redraw browser window at a different size</span>
-  responsive:     <span class="jsString">'n'</span>,
 
   <span class="comment">// the OS for the window border</span>
   os:             <span class="jsString">'mac'</span>,
@@ -315,22 +312,22 @@ $(<span class="jsString">'#browser'</span>).browserWrapper({
 		</div>
 	</footer>
 
-	<link rel="stylesheet" href="browserWrapper-lite/src/css/browserwrapper.css" />
+	<link rel="stylesheet" href="browserWrapper/src/css/browserwrapper.css" />
 	<script type="text/javascript" src="http://www.kryogenix.org/code/browser/smoothscroll/smoothscroll.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.onImagesLoad.min.js"></script>
-	<script type="text/javascript" src="browserWrapper-lite/src/js/jquery.browserwrapper.js"></script>
+	<script type="text/javascript" src="browserWrapper/src/js/jquery.browserwrapper.js"></script>
 	<script>
 		jQuery(document).ready(function($) {
-			$('#browser').browserWrapper({filePath: 'browserWrapper-lite/src/', os: 'mac', browser: 'chrome', responsive: 'y'});
-			$('#browser1').browserWrapper({filePath: 'browserWrapper-lite/src/', os: 'mac', browser: 'chrome', browserTitle: 'BBC', browserURL: 'http://bbc.co.uk', favicon: 'http://static.bbci.co.uk/h4base/0.209.1/img/apple-touch-icon.png'});
-			$('#browser2').browserWrapper({filePath: 'browserWrapper-lite/src/', os: 'mac', browser: 'firefox', browserTitle: 'Look at this awesome screenshot', browserURL: 'http://browserwrapper.molovo.co.uk'});
-			$('#browser3').browserWrapper({filePath: 'browserWrapper-lite/src/', os: 'windows', browser: 'chrome', browserTitle: 'browserWrapper', browserURL: 'http://browserwrapper.molovo.co.uk'});
-			$('#browser4').browserWrapper({filePath: 'browserWrapper-lite/src/', os: 'windows', browser: 'firefox', browserTitle: 'Options', browserURL: 'http://browserwrapper.molovo.co.uk'});
-			$('#browser5').browserWrapper({filePath: 'browserWrapper-lite/src/', os: 'mac', browser: 'chrome', browserTitle: 'Mac/Chrome'});
-			$('#browser6').browserWrapper({filePath: 'browserWrapper-lite/src/', os: 'mac', browser: 'firefox', browserTitle: 'Mac/Firefox'});
-			$('#browser7').browserWrapper({filePath: 'browserWrapper-lite/src/', os: 'windows', browser: 'chrome', browserTitle: 'Windows/Chrome'});
-			$('#browser8').browserWrapper({filePath: 'browserWrapper-lite/src/', os: 'windows', browser: 'firefox', browserTitle: 'Windows/Firefox'});
+			$('#browser').browserWrapper({os: 'mac', browser: 'chrome'});
+			$('#browser1').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'BBC', browserURL: 'http://bbc.co.uk', favicon: 'http://static.bbci.co.uk/h4base/0.209.1/img/apple-touch-icon.png'});
+			$('#browser2').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Look at this awesome screenshot', browserURL: 'http://browserwrapper.molovo.co.uk'});
+			$('#browser3').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'browserWrapper', browserURL: 'http://browserwrapper.molovo.co.uk'});
+			$('#browser4').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Options', browserURL: 'http://browserwrapper.molovo.co.uk'});
+			$('#browser5').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'Mac/Chrome'});
+			$('#browser6').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Mac/Firefox'});
+			$('#browser7').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'Windows/Chrome'});
+			$('#browser8').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Windows/Firefox'});
 
 			var top = $('header#top').height();
 			$(window).scroll(function() {
