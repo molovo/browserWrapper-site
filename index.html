@@ -219,6 +219,11 @@
 				</div>
 			</article>
 
+			<article class="grid 1of2">
+				<h4>Not enough choice for you?</h4>
+				<p>Take a look at these <a href="themes">custom themes.</a></p>
+			</article>
+
 			<div class="grid 1of1"></div>
 		</div>
 	</section>
@@ -337,7 +342,10 @@ jQuery(<span class="literal">document</span>).ready(<span class="literal">functi
                     <span class="comment">// false option loads the window border only with no browser controls</span>
 
   <span class="comment">// make the browser controls work with an internal iframe/object</span>
-  makeBrowserWork:  <span class="literal">true</span> <span class="object">||</span> <span class="literal">false</span>
+  makeBrowserWork:  <span class="literal">true</span> <span class="object">||</span> <span class="literal">false</span>,
+
+  <span class="comment">// enter a path to a custom theme</span>
+  theme:            <span class="string">'themes/lines/'</span>
 });
 					</code>
 				</pre>
@@ -372,7 +380,6 @@ jQuery(<span class="literal">document</span>).ready(<span class="literal">functi
 	<link rel="stylesheet" href="browserWrapper/src/css/browserwrapper.css" />
 	<script type="text/javascript" src="http://www.kryogenix.org/code/browser/smoothscroll/smoothscroll.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.onImagesLoad.min.js"></script>
 	<script type="text/javascript" src="browserWrapper/src/js/jquery.browserwrapper.js"></script>
 	<script>
 		jQuery(document).ready(function($) {

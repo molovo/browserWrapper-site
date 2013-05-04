@@ -1,0 +1,74 @@
+.lines {
+	background: white;
+}
+
+.lines * {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	position: relative;
+}
+
+.lines .browser-window-border {
+	border: 2px solid rgb(98,120,225);
+	padding: 5px;
+	border-radius: 10px;
+}
+
+.lines .browser-controls {
+	display: inline-block;
+	width: 100%;
+	padding: 3px 0;
+}
+
+.lines .browser-controls .button {
+	height: 15px;
+	width: 15px;
+	border: 2px solid rgb(98,120,225);
+	float: left;
+	border-radius: 100%;
+	margin-top: 6px;
+}
+
+.lines .browser-controls .address-bar-wrapper {
+	font-family: "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	float: left;
+	display: inline-block;
+	border: 2px solid rgb(98,120,225);
+	line-height: 1em;
+	margin-top: 2px;
+	padding: 2px 1em;
+	position: absolute;
+	left: 25px;
+	right: 0px;
+	border-radius: 3px;
+}
+
+.lines .browser-controls .favicon {
+	height: 16px;
+	vertical-align: middle;
+	margin-left: -.5em;
+}
+
+.lines .browser-content-container {
+	border: 2px solid rgb(98,120,225);
+	border-radius: 6px;
+	overflow: hidden;
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 300px;
+}
+
+.lines iframe,
+.lines object {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	min-height: 300px;
+}

@@ -298,6 +298,14 @@
             transform: rotate(45deg);
   }
 
+  .article-content {
+    letter-spacing: -.4em !important;
+  }
+
+  .article-content > * {
+    letter-spacing: 0;
+  }
+
   .floating.icon {
     font-family: "icomoon";
     position: fixed;
