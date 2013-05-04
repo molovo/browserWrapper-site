@@ -54,13 +54,32 @@
 			<article id="lines" class="grid 1of2">
 				<div id="browser" class="grid 1of1 remove-padding">
 					<div class="grid 1of1 remove-padding browser-content">
-						<iframe type="text/html" src="http://bbc.co.uk"></iframe>
+						<img class="grid 1of1 remove-padding" src="../img/screenshot.png" />
 					</div>
 				</div>
 
 				<div class="grid 1of1 article-content">
 					<h4 class="remove-bottom">Lines</h4>
 					<p>A simple minimalist theme</p>
+					<p class="grid 1of3 remove-padding">Author:</p>
+					<p class="grid 2of3 remove-padding">
+						James Dinsdale<br />
+						<a href="http://twitter.com/molovo">@molovo</a><br />
+						<a href="http://molovo.co.uk">molovo.co.uk</a>
+					</p>
+				</div>
+			</article>
+
+			<article id="sweeney" class="grid 1of2">
+				<div id="browser1" class="grid 1of1 remove-padding">
+					<div class="grid 1of1 remove-padding browser-content">
+						<img class="grid 1of1 remove-padding" src="../img/screenshot.png" />
+					</div>
+				</div>
+
+				<div class="grid 1of1 article-content">
+					<h4 class="remove-bottom">Sweeney</h4>
+					<p>A red theme</p>
 					<p class="grid 1of3 remove-padding">Author:</p>
 					<p class="grid 2of3 remove-padding">
 						James Dinsdale<br />
@@ -106,9 +125,14 @@
 		jQuery(document).ready(function($) {
 			$('#browser').browserWrapper({
 				theme: 'lines/',
-				makeBrowserWork: true,
-				favicon: 'http://static.bbci.co.uk/h4base/0.209.1/img/apple-touch-icon.png',
-				browserURL: 'http://bbc.co.uk'
+				favicon: 'http://images2.wikia.nocookie.net/__cb20120821200737/logopedia/images/thumb/3/32/Google_Favicon_2012.svg/50px-Google_Favicon_2012.svg.png',
+				browserURL: 'http://google.com',
+				shadow: '0'
+			});
+			$('#browser1').browserWrapper({
+				theme: 'sweeney/',
+				favicon: 'http://images2.wikia.nocookie.net/__cb20120821200737/logopedia/images/thumb/3/32/Google_Favicon_2012.svg/50px-Google_Favicon_2012.svg.png',
+				browserURL: 'http://google.com'
 			});
 		});
 	</script>

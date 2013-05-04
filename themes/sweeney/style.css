@@ -1,0 +1,65 @@
+.sweeney .browser-window-border {
+	background: #FF5859;
+	/*border: 1px solid #FF5859;*/
+	border-radius: 3px 3px 0 0;
+	box-shadow: inset 0px 1px 1px rgba(255,255,255,0.3), inset 0px -1px 1px rgba(0,0,0,0.3);
+	overflow: hidden;
+}
+
+.sweeney .browser-content {
+	height: auto !important;
+	padding: 0 !important;
+}
+
+.sweeney .address-bar-wrapper {
+	position: absolute;
+	top: 11px;
+	right: 105px;
+	left: 15px;
+	height: 22px;
+	margin-bottom: 5px;
+	background: white;
+	border-radius: 3px;
+	padding: 0;
+	box-shadow: inset 0px 1px 3px rgba(0,0,0,0.3);
+}
+
+.sweeney .address-bar-text {
+	font-family: "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-size: 12px;
+	margin-top: -5px;
+	margin-left: 5px;
+	float: left;
+}
+
+.sweeney .favicon {
+	height: 16px;
+	vertical-align: top;
+	margin-top: 3px;
+	margin-left: 3px;
+	float: left;
+}
+
+.sweeney .nav-buttons {
+	float: right;
+	margin-right: 15px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.sweeney .nav-buttons a {
+	color: white;
+	font-family: "icomoon-sweeney";
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "icomoon-sweeney";
+	src:url('fonts/icomoon-sweeney.eot');
+	src:url('fonts/icomoon-sweeney.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon-sweeney.woff') format('woff'),
+		url('fonts/icomoon-sweeney.ttf') format('truetype'),
+		url('fonts/icomoon-sweeney.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
