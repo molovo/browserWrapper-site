@@ -61,10 +61,7 @@
 					</h6>
 
 					<p>
-						Created by <a href="http://molovo.co.uk">molovo</a>
-					</p>
-					<p>
-						<small>Huge thanks go to <a href="http://twitter.com/japborst">Jelmer Borst</a> for making this work responsively.</small>
+						Created by <a href="http://twitter.com/molovo">@molovo</a> and <a href="http://twitter.com/japborst">@japborst</a>.
 					</p>
 					<div class="grid 1of1"> </div>
 				</div>
@@ -84,11 +81,22 @@
 					<h4>Inspiring Iframes</h4>
 					<p>Why have a plain box, when you can have a living browser window right on your web page?</p>
 					<p>Go ahead, type a URL into the address bar on your right &rarr;</p>
+
+					<p>
+						<small>
+							<p>
+								The back and forward buttons switch between the last <em>entered</em> URLs, as the actual iframe location cannot be deciphered.
+							</p>
+							<p>
+								Clicking the full-screen button opens the current URL in a new tab.
+							</p>
+						</small>
+					</p>
 				</div>
 				<div id="browser1" class="grid 1of2">
 					<div class="grid 1of1 remove-padding browser-content">
-						<!--<iframe type="text/html" src="http://bbc.co.uk"></iframe>-->
-						<object data="http://bbc.co.uk" type="text/html"></object>
+						<iframe type="text/html" src="http://bbc.co.uk"></iframe>
+						<!--<object data="http://bbc.co.uk" type="text/html"></object>-->
 					</div>
 				</div>
 			</div>
@@ -170,13 +178,43 @@
 			</article>
 			<article id="browser7" class="grid 1of2">
 				<div class="grid 1of1 remove-padding browser-content plumbg white center">
-					<h3 class="grid 1of1">Chrome/Windows</h3>
+					<h3 class="grid 1of1">Chrome/Windows 8</h3>
 
 				</div>
 			</article>
 			<article id="browser8" class="grid 1of2">
 				<div class="grid 1of1 remove-padding browser-content plumbg white center">
-					<h3 class="grid 1of1">Firefox/Windows</h3>
+					<h3 class="grid 1of1">Firefox/Windows 8</h3>
+
+				</div>
+			</article>
+			<article id="browser9" class="grid 1of2">
+				<div class="grid 1of1 remove-padding browser-content plumbg white center">
+					<h3 class="grid 1of1">Chrome/Windows 7</h3>
+
+				</div>
+			</article>
+			<article id="browser10" class="grid 1of2">
+				<div class="grid 1of1 remove-padding browser-content plumbg white center">
+					<h3 class="grid 1of1">Firefox/Windows 7</h3>
+
+				</div>
+			</article>
+			<article id="browser11" class="grid 1of2">
+				<div class="grid 1of1 remove-padding browser-content plumbg white center">
+					<h3 class="grid 1of1">None/Mac</h3>
+
+				</div>
+			</article>
+			<article id="browser12" class="grid 1of2">
+				<div class="grid 1of1 remove-padding browser-content plumbg white center">
+					<h3 class="grid 1of1">None/Windows 8</h3>
+
+				</div>
+			</article>
+			<article id="browser13" class="grid 1of2">
+				<div class="grid 1of1 remove-padding browser-content plumbg white center">
+					<h3 class="grid 1of1">None/Windows 7</h3>
 
 				</div>
 			</article>
@@ -219,8 +257,8 @@
 		<article class="warning">
 			<div class="container">
 				<p class="grid 1of1">
-					<strong>WARNING:</strong> Thanks to some CSS genius by <a href="http://japborst.net">Jelmer Borst</a> this now works responsively in the way that it should. However, the code is still in testing phase, and you may find bugs.
-				<br /><br />
+					<strong>WARNING:</strong> This plugin is still in development, and you may find bugs.
+				<br />
 					If you do find any errors, it would be super helpful if you could <a href="http://github.com/molovo/browserWrapper/issues">raise an issue on Github</a>.
 				</p>
 			</div>
@@ -271,25 +309,33 @@ jQuery(<span class="literal">document</span>).ready(<span class="literal">functi
 					<code>
 <span class="object">$</span>(<span class="string">'#browser'</span>).browserWrapper({
   <span class="comment">// title to appear on tab</span>
-  browserTitle:   <span class="string">'Your Awesome Title'</span>,
+  browserTitle:     <span class="string">'Your Awesome Title'</span>,
 
   <span class="comment">// URL to appear in address bar</span>
-  browserURL:     <span class="string">'http://your.awesome.url.com'</span>,
+  browserURL:       <span class="string">'http://your.awesome.url.com'</span>,
 
   <span class="comment">// URL for favicon to appear on tab</span>
-  favicon:        <span class="string">'http://browserwrapper.molovo.co.uk/img/favicon.png'</span>,
+  favicon:          <span class="string">'http://browserwrapper.molovo.co.uk/img/favicon.png'</span>,
 
   <span class="comment">// path to browserWrapper</span>
-  filePath:       <span class="string">'browserWrapper/src/'</span>,
+  filePath:         <span class="string">'browserWrapper/src/'</span>,
 
   <span class="comment">// adds a box-shadow to the browser, follows CSS syntax, use '0' to remove</span>
-  shadow:         <span class="string">'0px 5px 15px rgba(0,0,0,0.3)'</span>,
+  shadow:           <span class="string">'0px 5px 15px rgba(0,0,0,0.3)'</span>,
 
   <span class="comment">// the OS for the window border</span>
-  os:             <span class="string">'mac'</span>,
+  os:               <span class="string">'mac'</span> <span class="object">||</span> <span class="string">'windows'</span> <span class="object">||</span> <span class="string">'detect'</span>,
+                    <span class="comment">// detect options employ user-agent detection to mimic the users browser/OS</span>
+
+  <span class="comment">// if windows is selected, choose the version</span>
+  winVersion:       <span class="string">'windows7'</span> <span class="object">||</span> <span class="string">'windows8'</span>,
 
   <span class="comment">// the browser whose controls to mimick</span>
-  browser:        <span class="string">'chrome'</span>
+  browser:          <span class="string">'chrome'</span> <span class="object">||</span> <span class="string">'firefox'</span> <span class="object">||</span> <span class="string">'detect'</span> <span class="object">||</span> <span class="literal">false</span>,
+                    <span class="comment">// false option loads the window border only with no browser controls</span>
+
+  <span class="comment">// make the browser controls work with an internal iframe/object</span>
+  makeBrowserWork:  <span class="literal">true</span> <span class="object">||</span> <span class="literal">false</span>
 });
 					</code>
 				</pre>
@@ -312,7 +358,7 @@ jQuery(<span class="literal">document</span>).ready(<span class="literal">functi
 
 			<div class="grid 1of2 ralign">
 				<p class="remove-bottom">
-					Created with love, by <a href="http://molovo.co.uk">@molovo</a>.<br />
+					Created with love, by <a href="http://molovo.co.uk">@molovo</a> and <a href="http://japborst.net">@japborst</a>.<br />
 					Site built with <a href="http://melodycss.co">Melody</a>.
 				</p>
 			</div>
@@ -328,15 +374,20 @@ jQuery(<span class="literal">document</span>).ready(<span class="literal">functi
 	<script type="text/javascript" src="browserWrapper/src/js/jquery.browserwrapper.js"></script>
 	<script>
 		jQuery(document).ready(function($) {
-			$('#browser').browserWrapper({os: 'mac', browser: 'chrome'});
-			$('#browser1').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'BBC', browserURL: 'http://bbc.co.uk', favicon: 'http://static.bbci.co.uk/h4base/0.209.1/img/apple-touch-icon.png', makeBrowserWork: true});
+			$('#browser').browserWrapper({os: 'detect', browser: 'detect'});
+			$('#browser1').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'BBC', browserURL: 'http://bbc.co.uk', favicon: 'http://static.bbci.co.uk/h4base/0.209.1/img/apple-touch-icon.png', makeBrowserWork: true});
 			$('#browser2').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Look at this awesome screenshot', browserURL: 'http://browserwrapper.molovo.co.uk'});
 			$('#browser3').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'browserWrapper', browserURL: 'http://browserwrapper.molovo.co.uk'});
 			$('#browser4').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Options', browserURL: 'http://browserwrapper.molovo.co.uk'});
 			$('#browser5').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'Mac/Chrome'});
 			$('#browser6').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Mac/Firefox'});
-			$('#browser7').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'Windows/Chrome'});
-			$('#browser8').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Windows/Firefox'});
+			$('#browser7').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'Windows 8/Chrome'});
+			$('#browser8').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Windows 8/Firefox'});
+			$('#browser9').browserWrapper({os: 'windows', winVersion: 'windows7', browser: 'chrome', browserTitle: 'Windows 7/Chrome'});
+			$('#browser10').browserWrapper({os: 'windows', winVersion: 'windows7', browser: 'firefox', browserTitle: 'Windows 7/Firefox'});
+			$('#browser11').browserWrapper({os: 'mac', browser: false, browserTitle: 'Mac/None'});
+			$('#browser12').browserWrapper({os: 'windows', browser: false, browserTitle: 'Windows 8/None'});
+			$('#browser13').browserWrapper({os: 'windows', winVersion: 'windows7', browser: false, browserTitle: 'Windows 7/None'});
 
 			var top = $('header#top').height();
 			$(window).scroll(function() {
