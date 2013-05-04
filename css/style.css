@@ -135,7 +135,7 @@
       content: 'G';
     }
 
-  article.warning {
+  article.warning, article.theme-docs-link {
     background: rgb(245,245,245);
     font-size: .75em;
     line-height: 1.5em;
