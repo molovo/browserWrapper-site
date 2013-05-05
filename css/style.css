@@ -302,8 +302,11 @@
     letter-spacing: -.4em !important;
   }
 
-  .article-content > * {
+  .article-content > *:not(.article-content) {
     letter-spacing: 0;
+  }
+  .article-content > hr {
+    margin: 1.5em auto;
   }
 
   .floating.icon {
