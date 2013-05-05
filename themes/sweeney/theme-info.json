@@ -1,4 +1,8 @@
 {
 	"name": "sweeney",
-	"author": "molovo"
+	"author": "molovo",
+	"themeOptions": {
+		"backgroundColor": "#FF5859",
+		"testVar": "Tada!"
+	}
 }
