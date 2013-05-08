@@ -48,6 +48,8 @@
 	color: white;
 	font-family: "icomoon-sweeney";
 	font-weight: 400;
+	margin-top: 1px;
+	display: inline-block;
 }
 
 @font-face {
