@@ -1,0 +1,6 @@
+[submodule "browserWrapper"]
+	path = browserWrapper
+	url = git@github.com:molovo/browserwrapper.git
+[submodule "browserWrapper-lite"]
+	path = browserWrapper-lite
+	url = git@github.com:molovo/browserwrapper-lite.git
