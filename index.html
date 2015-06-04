@@ -378,16 +378,16 @@ jQuery(<span class="literal">document</span>).ready(<span class="literal">functi
 	</footer>
 
 	<link rel="stylesheet" href="browserWrapper/src/css/browserwrapper.css" />
-	<script type="text/javascript" src="//www.kryogenix.org/code/browser/smoothscroll/smoothscroll.js"></script>
+	<script type="text/javascript" src="js/smoothscroll.js"></script>
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script type="text/javascript" src="browserWrapper/src/js/jquery.browserwrapper.js"></script>
 	<script>
 		jQuery(document).ready(function($) {
 			$('#browser').browserWrapper({os: 'detect', browser: 'detect'});
-			$('#browser1').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'BBC', browserURL: 'http://bbc.co.uk', favicon: 'http://static.bbci.co.uk/h4base/0.209.1/img/apple-touch-icon.png', makeBrowserWork: true});
-			$('#browser2').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Google', browserURL: 'http://google.com', favicon: 'http://images2.wikia.nocookie.net/__cb20120821200737/logopedia/images/thumb/3/32/Google_Favicon_2012.svg/50px-Google_Favicon_2012.svg.png'});
-			$('#browser3').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'browserWrapper', browserURL: 'http://browserwrapper.molovo.co.uk'});
-			$('#browser4').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Options', browserURL: 'http://browserwrapper.molovo.co.uk'});
+			$('#browser1').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'BBC', browserURL: '//bbc.co.uk', favicon: '//static.bbci.co.uk/h4base/0.209.1/img/apple-touch-icon.png', makeBrowserWork: true});
+			$('#browser2').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Google', browserURL: '//google.com', favicon: '//images2.wikia.nocookie.net/__cb20120821200737/logopedia/images/thumb/3/32/Google_Favicon_2012.svg/50px-Google_Favicon_2012.svg.png'});
+			$('#browser3').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'browserWrapper', browserURL: 'https://browserwrapper.molovo.co'});
+			$('#browser4').browserWrapper({os: 'windows', browser: 'firefox', browserTitle: 'Options', browserURL: 'https://browserwrapper.molovo.co'});
 			$('#browser5').browserWrapper({os: 'mac', browser: 'chrome', browserTitle: 'Mac/Chrome'});
 			$('#browser6').browserWrapper({os: 'mac', browser: 'firefox', browserTitle: 'Mac/Firefox'});
 			$('#browser7').browserWrapper({os: 'windows', browser: 'chrome', browserTitle: 'Windows 8/Chrome'});
